@@ -1,2 +1,2 @@
 # ipruning
-IPruning: Ising Energy-based Pruning ofDeep Convolutional Neural Networks
+IPruning: Ising Energy-based Pruning of Deep Convolutional Neural Networks

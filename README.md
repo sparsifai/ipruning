@@ -62,7 +62,7 @@ We have conducted a high level hyper-parameters search in following space:
 - Initial probabilty of binary states: {0.2,0.4,0.6,0.8}
 
 
-The parameters for most edropout experiemnts are:
+The parameters for most experiemnts are:
 
 - Learning rate: Initial leanring rate of 1 with adaptive step learning rate decaly with gamma 0.1 at every 50 epoch 
 - Optimizer: Adadelta with rho=0.9, eps=1e-06, weight_decay=0.00001
@@ -77,12 +77,12 @@ The parameters for most edropout experiemnts are:
 Some hyper-parameters analysis are provided in the paper.
 
 ### How to Train
-`python3 edropout.py`
+`python3 pidropout.py`
 
 Parameters inside pipruning.py:   
 dataset = {'fashion','kuzushiji','cifar10','cifar100','flowers'}    
 nnmodel = {'resnet18','resnet34','resnet50','resnet101'}   
-model = {'ising','simple'} # ising: edropout method; simple: original model   
+model = {'ising','simple'} # ising: idropout method; simple: original model   
 
 ## Results
 The results are average of five independant executions. More results are provided in the paper.
@@ -93,20 +93,7 @@ The results are average of five independant executions. More results are provide
 A docker container will be pushed asap.
 
 ## Parallel Implementation
-The current version of the optimization phase is written in NumPy as a POC for fast implementation. The running time is slower than the original model. A parallel version will be implemented very soon. The executing time using numpy on a single RTX GPU on the Flowers dataset with 8 candidate state vectors is as follows:
-
-| Model        | EPruning/Original  | Number of States
-| ------------- |:-------------:| -----:|
-| resnet18     | 17.21x | 6208 |
-| resnet34     | 25.12x      | 9920  |
-| resnet50  | 19.63x    |  32448  |
-resnet101 | 22.56x | 58560
-AlexNet | 28.97x | 18662
-SqueezeNet | 1.33x| 3558
-
-
-Again, we need to emphasize that this is a quick implementation and a parallel version will be uploaded asap!
-
+The current version of the optimization phase is written in NumPy as a POC for fast implementation. The running time is slower than the original model. A parallel version will be published, after publication of the paper. 
 
 ## Contact
 Please send your feedback and comments to sparsifai.ai@gmail.com

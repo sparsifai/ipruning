@@ -81,24 +81,43 @@ Some hyper-parameters analysis are provided in the paper.
 
 Arguments:
     parser.add_argument('--batch-size', type=int, default=128, metavar='N', help='input batch size for training (default: 64)')
+    
     parser.add_argument('--test-batch-size', type=int, default=128, metavar='N', help='input batch size for testing (default: 1000)')
+    
     parser.add_argument('--epochs', type=int, default=200, metavar='N', help='number of epochs to train (default: 14)')
+    
     parser.add_argument('--lr', type=float, default=1., metavar='LR', help='learning rate (default: 1.0)')
+    
     parser.add_argument('--gamma', type=float, default=0.1, metavar='M', help='Learning rate step gamma (default: 0.7)')
+    
     parser.add_argument('--lr_stepsize', type=float, default=50, metavar='M', help='Learning rate step gamma (default: 0.7)')
+    
     parser.add_argument('--no-cuda', action='store_true', default=False, help='disables CUDA training')
+    
     parser.add_argument('--seed', type=int, default=1, metavar='S', help='random seed (default: 1)')
+    
     parser.add_argument('--log-interval', type=int, default=20, metavar='N', help='how many batches to wait before logging training status')
+    
     parser.add_argument('--save-ls', action='store_true', default=False, help='For Saving the current Model')
+    
     parser.add_argument('--save_model', action='store_true', default=True, help='For Saving the current Model')
+    
     parser.add_argument('--NS', default=32, help='pop size')
+    
     parser.add_argument('--stopcounter', default=10, help='stopcounter')
+    
     parser.add_argument('--threshold_early_state', default=5, help='threshold_early_state')
+    
     parser.add_argument('--pre_trained_f', default=False, help='load pretrained weights')
+    
     parser.add_argument('--scheduler_m', default='StepLR', help='lr scheduler')
+    
     parser.add_argument('--optimizer_m', default="Adadelta", help='optimizer model')
+    
     parser.add_argument('--nnmodel', default="resnet34", help='original neural net to prune {'resnet18','resnet34','resnet50','resnet101'} ')
+    
     parser.add_argument('--dataset', default="flowers", help='dataset {'fashion','kuzushiji','cifar10','cifar100','flowers'}')
+    
     parser.add_argument('--model', default="ising", help='ising vs. original {'ising','simple'}')
     
 

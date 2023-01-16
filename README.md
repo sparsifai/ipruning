@@ -80,6 +80,7 @@ Some hyper-parameters analysis are provided in the paper.
 `python3 pidropout.py -nnmodel resnet34 -dataset flowers -NS 9 -batch-size 64`
 
 Arguments:
+
     parser.add_argument('--batch-size', type=int, default=128, metavar='N', help='input batch size for training (default: 64)')
     
     parser.add_argument('--test-batch-size', type=int, default=128, metavar='N', help='input batch size for testing (default: 1000)')

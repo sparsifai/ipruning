@@ -1,6 +1,7 @@
 # ipruning
 IPruning: Ising Energy-based Pruning of Deep Convolutional Neural Networks
 
+The paper will be available online upon acceptance. 
 
 ## Requirements
 - Python 3.7+
@@ -133,5 +134,4 @@ A docker container will be pushed asap.
 ## Parallel Implementation
 The current version of the optimization phase is written in NumPy as a POC for fast implementation. The running time is slower than the original model. A parallel version will be published, after publication of the paper. 
 
-## Contact
-Please send your feedback and comments to sparsifai.ai@gmail.com
+

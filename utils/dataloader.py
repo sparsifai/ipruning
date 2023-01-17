@@ -9,9 +9,7 @@ from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
 import time,os,sys
 import numpy as np
-# import matplotlib.pyplot as plt
 import copy
-# import tensorflow as tf
 import torchvision
 from numpy import unique
 from scipy.stats import entropy as scipy_entropy
